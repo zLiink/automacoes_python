@@ -24,14 +24,104 @@ webpage = "https://expanssiva.com.br/admin#/pages"
 produto_criar = "Folders Personalizados em "
 pa.PAUSE = 0.7
 
-title = f"Folders Personalizados para "
-kywords = "folders personalizados, folders personalizados com fotos, folders personalizados para divulgação de produtos e serviços, folders personalizados para eventos, folders personalizados para feiras, folders personalizados para pontos de venda, folders personalizados para envio direto, gráfica online especializada em folders personalizados, produção ágil de folders personalizados, envio rápido de folders personalizados"
-description = "Somos uma gráfica online especializada na criação e impressão de folders personalizados, atendendo desde pequenas até grandes tiragens com total flexibilidade. Oferecemos produção ágil e envio eficiente para diversas localidades, garantindo que seus folders personalizados cheguem rapidamente até você."
-
 #cidades
 cidades = [
-    "São Paulo",
-    "Campinas"
+    "São Bernardo do Campo",
+    "Santo André",
+    "Osasco",
+    "São José dos Campos",
+    "Ribeirão Preto",
+    "Sorocaba",
+    "Barueri",
+    "Jundiaí",
+    "São José do Rio Preto",
+    "Santos",
+    "Mogi das Cruzes",
+    "Piracicaba",
+    "Indaiatuba",
+    "Itaquaquecetuba",
+    "Franca",
+    "Americana",
+    "São Caetano do Sul",
+    "Cotia",
+    "Jacareí",
+    "Presidente Prudente",
+    "Hortolândia",
+    "Limeira",
+    "Sumaré",
+    "Taboão da Serra",
+    "Marília",
+    "Itu",
+    "Araraquara",
+    "Belo Horizonte",
+    "Uberlândia",
+    "Contagem",
+    "Juiz de Fora",
+    "Betim",
+    "Montes Claros",
+    "Uberaba",
+    "Ipatinga",
+    "Sete Lagoas",
+    "Santa Luzia",
+    "Divinópolis",
+    "Poços de Caldas",
+    "Ibirité",
+    "Pouso Alegre",
+    "Nova Lima",
+    "Ribeirão das Neves",
+    "Governador Valadares",
+    "Patos de Minas",
+    "Araguari",
+    "Passos",
+    "Curitiba",
+    "Londrina",
+    "Maringá",
+    "Ponta Grossa",
+    "Cascavel",
+    "São José dos Pinhais",
+    "Foz do Iguaçu",
+    "Colombo",
+    "Guarapuava",
+    "Araucária",
+    "Toledo",
+    "Apucarana",
+    "Pinhais",
+    "Arapongas",
+    "Umuarama",
+    "Joinville",
+    "Florianópolis",
+    "Blumenau",
+    "São José",
+    "Itajaí",
+    "Chapecó",
+    "Criciúma",
+    "Jaraguá do Sul",
+    "Palhoça",
+    "Lages",
+    "Balneário Camboriú",
+    "Brusque",
+    "Tubarão",
+    "Porto Alegre",
+    "Caxias do Sul",
+    "Canoas",
+    "Pelotas",
+    "Santa Maria",
+    "Gravataí",
+    "Novo Hamburgo",
+    "Viamão",
+    "São Leopoldo",
+    "Passo Fundo",
+    "Rio Grande",
+    "Alvorada",
+    "Santa Cruz do Sul",
+    "Cachoeirinha",
+    "Uruguaiana",
+    "Bento Gonçalves",
+    "Erechim",
+    "Guaíba",
+    "Ijuí",
+    "Santana do Livramento",
+    "Sapiranga"
 ]
 
 #TEMPO P/ INÍCIO AUTO
@@ -57,127 +147,99 @@ for i in range(len(cidades)):
     sleep(1)
 
     #codigo da pagina
-    cod_pagina = f"""<!-- Topo -->
-    <x-page id="4315"/> 
+    cod_pagina = f"""<!-- TOPO -->
+<x-page id="4326"/>
 
-    <div class="container"> 
-        <h1 style="text-align:center; color:#222; font-size:1.6rem; padding-top:13px; margin-bottom:3px; line-height:1.2; font-weight:700;">
-            Revistas Personalizadas para {cidades[i]} com Entrega Rápida
-        </h1>
+<div class="container">
+    <br>
+    <h1 style="text-align:center; font-size:clamp(16px,4vw,23px); margin:9 9 8px; color:#222;">
+        Impressão de Folders para {cidades[i]} com Qualidade e Entrega Rápida
+    </h1>
+    <p style="text-align:center;">
+        Dê visibilidade à sua marca com copos criativos, funcionais e cheios de personalidade!
+    </p>
+</div>
 
-        <!-- Produtos PG Revistas -->
-        <x-page id="4318"/>
-    </div>
+<!-- CONTEÚDO -->
+<x-page id="4327"/>
 
-    <div class="container">
-
-        <h2 class="h2-pg">Revistas Personalizadas para {cidades[i]} com Impressão de Alta Qualidade</h2>
+<div class="container">
+    <article>
+        <h2>Impressão de Folders em {cidades[i]}: A Solução Ideal para sua Divulgação</h2>
 
         <p>
-            Somos uma <strong>gráfica online especializada</strong> na criação e impressão de materiais gráficos voltados para divulgação, apresentação e fortalecimento de marcas. Produzimos 
-            <a href="/categoria/revistas"><strong>revistas personalizadas</strong></a> 
-            com alto padrão de qualidade, atendendo desde pequenas até grandes tiragens com total flexibilidade.
+            Se você está buscando <strong>impressão de folders em {cidades[i]}</strong>, sabe que a agilidade e a qualidade do material são fundamentais para o sucesso de uma estratégia de marketing offline. Em uma cidade com economia pulsante e um setor de serviços tão competitivo, apresentar sua empresa com um material gráfico de alto padrão não é apenas um detalhe, é uma necessidade estratégica para se destacar no mercado campineiro.
         </p>
 
         <p>
-            Você pode configurar sua revista conforme a sua necessidade, escolhendo o tipo de papel da capa e do miolo, além de acabamentos como 
-            <strong>laminação fosca ou brilho</strong>, garantindo maior durabilidade e um visual sofisticado. Trabalhamos com produção ágil e envio eficiente para {cidades[i]} e região.
+            Nossa plataforma atua como uma gráfica online especializada, conectando as necessidades das empresas de <strong>{cidades[i]}</strong> às melhores tecnologias de impressão digital e offset. Seja para um evento corporativo ou para prospecção direta nos bairros mais movimentados da cidade, entregamos folders que comunicam autoridade e profissionalismo, integrando perfeitamente o seu mix de <strong><a href="/papelaria-personalizada">papelaria</a></strong> institucional.
         </p>
 
-        <h2 class="h2-pg">Para que servem as revistas personalizadas?</h2>
+        <h2>Folders Personalizados em {cidades[i]} com Entrega Rápida</h2>
+
+        <p>
+            Entendemos que para o empresário local o tempo é um recurso escasso. Por isso, otimizamos nossa logística para garantir que a <strong>entrega de <a href="/categoria/folders">folders em {cidades[i]}</a></strong> seja feita com o máximo de eficiência. Ao optar por nossa gráfica online, você tem a conveniência de fazer o pedido sem sair do seu escritório, contando com um sistema de rastreio moderno e prazos que respeitam o cronograma de vendas da sua empresa.
+        </p>
+
+        <p>
+            Atendemos desde pequenos comércios locais até grandes indústrias instaladas nos principais polos comerciais de <strong>{cidades[i]}</strong>. Nosso foco é garantir que o seu material promocional chegue em suas mãos com cores vibrantes e acabamento impecável, reforçando a identidade visual da sua marca em toda a cidade.
+        </p>
+
+        <h3>Modelos e Utilidades para sua Estratégia em {cidades[i]}</h3>
 
         <ul>
-            <li>Divulgação de produtos e serviços</li>
-            <li>Apresentações institucionais</li>
-            <li>Catálogos comerciais</li>
-            <li>Materiais para eventos e feiras</li>
-            <li>Projetos editoriais e promocionais</li>
+            <li><strong>Folder 1 dobra:</strong> Conhecido como meia dobra, é ideal para comunicados diretos, convites corporativos e apresentações rápidas de impacto.</li>
+            <li><strong>Folder 2 dobras:</strong> O formato mais versátil, excelente para apresentações institucionais, lançamentos de produtos e materiais de vendas estruturados.</li>
+            <li><strong>Folder 3 dobras (Sanfona ou Carteira):</strong> Oferece maior área útil, sendo perfeito para guias detalhados de serviços, manuais de produtos e fluxos de informações complexas.</li>
+            <li><strong>Papel Couchê 90g a 150g:</strong> Proporciona o equilíbrio ideal entre custo-benefício, resistência e qualidade de impressão para grandes tiragens.</li>
+            <li><strong>Acabamentos Premium:</strong> Aplicações de verniz total ou localizado que elevam o status do material, garantindo um impacto visual profissional e duradouro.</li>
         </ul>
 
+        <h2>Por que escolher nossa Gráfica Online para atender {cidades[i]}?</h2>
+
         <p>
-            As revistas são uma ferramenta estratégica de marketing, permitindo apresentar informações de forma organizada, visualmente atrativa e com grande impacto no público.
+            Muitos clientes buscam por <strong>onde fazer folders em {cidades[i]}</strong> e precisam de uma solução que una qualidade de agência e preço de fábrica. Nossa proposta é oferecer exatamente isso para quem precisa contratar <strong>folders para empresas em {cidades[i]}</strong>, com a facilidade de um processo 100% digital e suporte especializado.
         </p>
 
-        <h2 class="h2-pg">Tamanhos mais utilizados para revistas personalizadas</h2>
+        <ol>
+            <li><strong>Custo-benefício superior:</strong> Preços competitivos com acabamento profissional em toda a linha de materiais impressos.</li>
+            <li><strong>Tecnologia de ponta:</strong> Impressoras de última geração que garantem fidelidade de cores em CMYK e alta definição.</li>
+            <li><strong>Facilidade no Orçamento:</strong> Sistema intuitivo para selecionar configurações e visualizar o investimento da sua campanha na hora.</li>
+        </ol>
+
+        <h2>Folders em {cidades[i]}: Impacto Visual que Converte Clientes Reais</h2>
 
         <p>
-            As revistas podem ser produzidas conforme o seu projeto gráfico, desde que respeitem os padrões técnicos para impressão. Confira alguns dos formatos mais utilizados:
-        </p>
-
-        <ul>
-            <li>10,5 x 15 cm (fechada) – 21 x 15 cm (aberta)</li>
-            <li>15 x 21 cm (fechada) – 30 x 21 cm (aberta)</li>
-            <li>21 x 30 cm (fechada) – 42 x 30 cm (aberta)</li>
-        </ul>
-
-        <p>
-            É importante considerar sempre a diferença entre o tamanho aberto e fechado para garantir um layout bem aplicado.
-        </p>
-
-        <h2 class="h2-pg">Criação de arte para revistas personalizadas</h2>
-
-        <p>
-            Você pode enviar sua própria arte durante o processo de compra. Caso não possua um layout pronto, nosso time criativo está preparado para desenvolver um projeto exclusivo, focado em 
-            <strong>comunicação visual eficiente e apresentação profissional</strong>.
+            A distribuição de material impresso continua sendo uma das formas mais eficazes de conversão em <strong>{cidades[i]}</strong>. O uso de <strong>folders personalizados preço</strong> justo permite que você escale sua panfletagem sem comprometer o orçamento. Para maximizar o impacto das suas ações, considere integrar o uso de folders com <strong><a href="/brindes-personalizados">brindes corporativos</a></strong> personalizados, criando uma experiência de marca muito mais poderosa e memorável.
         </p>
 
         <p>
-            Criamos materiais pensados para gerar impacto, transmitir credibilidade e valorizar seus produtos ou serviços.
+            O folder é uma ferramenta tátil: ele permanece na mesa do seu cliente, garantindo que sua mensagem seja lembrada por muito mais tempo. Em uma cidade dinâmica como <strong>{cidades[i]}</strong>, essa presença física e a qualidade da sua <strong>papelaria</strong> são diferenciais importantes frente à concorrência digital.
         </p>
 
-        <h2 class="h2-pg">Revistas personalizadas com fotos</h2>
+        <h3>Dicas para um Layout de Folder que Gere Resultados</h3>
 
         <p>
-            As <strong>revistas personalizadas com fotos</strong> são ideais para registrar momentos especiais como eventos, viagens, comemorações ou projetos pessoais. Com impressão de alta qualidade, você transforma memórias em um material durável e sofisticado.
+            Para que seu investimento em uma <strong>gráfica de folders rápida</strong> traga retorno, considere incluir um título chamativo que resolva uma dor do seu cliente e um <em>Call to Action</em> (CTA) claro, como um QR Code direcionando para o seu WhatsApp de vendas em <strong>{cidades[i]}</strong>.
         </p>
 
-        <p>
-            Personalize com imagens, textos e diagramação exclusiva, criando uma peça única e cheia de significado.
-        </p>
-
-        <h2 class="h2-pg">Revistas para divulgação de produtos e serviços</h2>
+        <h2>Solicite sua Impressão de Folders para {cidades[i]}</h2>
 
         <p>
-            Utilize revistas como uma poderosa ferramenta de marketing para apresentar seus produtos e serviços de forma detalhada e profissional.
-        </p>
-
-        <ul>
-            <li>Inclua fotos e descrições completas</li>
-            <li>Apresente diferenciais competitivos</li>
-            <li>Utilize gráficos e elementos visuais</li>
-            <li>Fortaleça sua marca com material impresso de alto padrão</li>
-        </ul>
-
-        <p>
-            Esse tipo de material é ideal para distribuição em eventos, feiras, pontos de venda ou envio direto para clientes.
-        </p>
-
-        <h2 class="h2-pg">Por que escolher nossa gráfica para atender {cidades[i]}?</h2>
-
-        <ul>
-            <li>Alta qualidade de impressão</li>
-            <li>Flexibilidade de tiragem</li>
-            <li>Acabamentos profissionais</li>
-            <li>Produção rápida</li>
-            <li>Atendimento especializado</li>
-        </ul>
-
-        <h2 class="h2-pg">Produção ágil e envio rápido para {cidades[i]}</h2>
-
-        <p>
-            Oferecemos <strong>produção eficiente e logística otimizada</strong>, garantindo que suas revistas personalizadas cheguem rapidamente até você em {cidades[i]}.
+            Não deixe sua comunicação para depois. Se você busca um <strong>folder 2 dobras papel couchê</strong> ou materiais com acabamentos especiais, nossa plataforma está pronta para atender sua demanda em <strong>{cidades[i]}</strong> com agilidade. Configuramos nossos processos para oferecer a melhor experiência de compra online de materiais gráficos e soluções para empresas.
         </p>
 
         <p>
-            Simule agora mesmo o seu pedido: clique em <strong>simular preço</strong>, informe seu CEP e visualize prazos e valores de forma prática.
+            Seja para uma feira de negócios, um lançamento regional ou para reforçar sua presença de marca, conte com nossa expertise em impressão e logística para <strong>{cidades[i]}</strong>. Garanta agora materiais profissionais que vendem por você!
         </p>
+    </article>
+</div>
 
-        <hr>
-
-    </div>
-
-    <!-- Comentários de Clientes -->
-    <x-page id="2799"/>"""
+<!-- Comentários -->
+<hr>
+<br />
+<x-page id="7236"/>
+<br />"""
 
     #copiar e colar o codigo ja substituido
     pa.press("tab")
@@ -186,11 +248,16 @@ for i in range(len(cidades)):
     pa.click(x=1740, y=604)
 
     #descer a pagina para preencher os campos de title, keywords e description
-    pa.press("down", presses=60)
+    pa.press("down", presses=70)
+
+    #variavel do title
+    title = f"Folders em {cidades[i]}: Impressão e Entrega Rápida"
+    kywords = f"folders em {cidades[i]}, impressão de folders {cidades[i]}, gráfica online entrega em {cidades[i]}, folders personalizados preço, onde fazer folders em {cidades[i]}, folders para empresas {cidades[i]}, gráfica de folders rápida, folder 2 dobras papel couchê, material promocional em {cidades[i]}"
+    description = f"Precisa de folders em {cidades[i]}? Gráfica online especializada em folders personalizados com entrega em toda a região. Alta qualidade e melhor preço. Confira!"
 
     #preencher campos  title, kyewords e description
     pa.click(x=935, y=528)
-    pc.copy(title + cidades[i])
+    pc.copy(title)
     pa.hotkey("ctrl", "v")
     pa.press("tab")
     pc.copy(kywords)
@@ -199,9 +266,9 @@ for i in range(len(cidades)):
     pc.copy(description)
     pa.hotkey("ctrl", "v")
     pa.press("tab")
-    pa.press("enter")
+    #pa.press("enter")
 
     #salvar e fechar aba
-    pa.hotkey("ctrl", "w")
+    #pa.hotkey("ctrl", "w")
 
-    print(f"Pagina da cidade{cidades[i]} criada com sucesso!")
+    print(f"Pagina da cidade {cidades[i]} criada com sucesso!")

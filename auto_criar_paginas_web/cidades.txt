@@ -1,6 +1,5 @@
 cidades = [
     "São Paulo",
-    "Campinas",
     "Guarulhos",
     "São Bernardo do Campo",
     "Santo André",
