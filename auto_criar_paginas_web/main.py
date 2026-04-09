@@ -1,3 +1,19 @@
+"""
+Automação de criação de páginas web em sistema interno.
+
+Este script utiliza PyAutoGUI para automatizar o processo de criação de páginas
+no painel administrativo, gerando conteúdos personalizados com base em uma lista
+de cidades.
+
+Para cada cidade, o script:
+- Acessa o sistema
+- Cria uma nova página
+- Define o título dinamicamente
+- Insere um template HTML com conteúdo personalizado
+
+Objetivo: agilizar a criação em massa de páginas otimizadas para diferentes localidades.
+"""
+
 #IMPORTS
 import pyautogui as pa
 import pyperclip as pc
@@ -5,13 +21,17 @@ from time import sleep
 
 #VARIAVEIS
 webpage = "https://expanssiva.com.br/admin#/pages"
-produto_busca = "Revistas Personalizadas em "
+produto_criar = "Folders Personalizados em "
 pa.PAUSE = 0.7
+
+title = f"Folders Personalizados para "
+kywords = "folders personalizados, folders personalizados com fotos, folders personalizados para divulgação de produtos e serviços, folders personalizados para eventos, folders personalizados para feiras, folders personalizados para pontos de venda, folders personalizados para envio direto, gráfica online especializada em folders personalizados, produção ágil de folders personalizados, envio rápido de folders personalizados"
+description = "Somos uma gráfica online especializada na criação e impressão de folders personalizados, atendendo desde pequenas até grandes tiragens com total flexibilidade. Oferecemos produção ágil e envio eficiente para diversas localidades, garantindo que seus folders personalizados cheguem rapidamente até você."
 
 #cidades
 cidades = [
-    "Gramado",
-    "Canoas"
+    "São Paulo",
+    "Campinas"
 ]
 
 #TEMPO P/ INÍCIO AUTO
@@ -24,21 +44,17 @@ for i in range(len(cidades)):
     pa.press("enter")
     sleep(1.5)
 
-    #pesquisar cidade
-    pa.write(produto_busca)
+    #clicar em editar a pagina buscada
+    pa.click(r"imgs\nova_pagina.png")
+    pa.moveTo(x=100, y=100)
+    sleep(1)
+
+    #insere o nome da pagina + cidade
+    pa.write(produto_criar)
     pc.copy(cidades[i])
     pa.hotkey("ctrl", "v")
     pa.press("enter")
     sleep(1)
-
-    #clicar em editar a pagina buscada
-    pa.click(r"imgs\editar.png")
-    pa.moveTo(x=100, y=100)
-    sleep(1)
-
-    #selecionar codigo p/ substituir
-    pa.press("tab")
-    pa.hotkey("ctrl", "a")
 
     #codigo da pagina
     cod_pagina = f"""<!-- Topo -->
@@ -164,9 +180,28 @@ for i in range(len(cidades)):
     <x-page id="2799"/>"""
 
     #copiar e colar o codigo ja substituido
+    pa.press("tab")
     pc.copy(cod_pagina)
     pa.hotkey("ctrl", "v")
-    pa.press("f3")
+    pa.click(x=1740, y=604)
+
+    #descer a pagina para preencher os campos de title, keywords e description
+    pa.press("down", presses=60)
+
+    #preencher campos  title, kyewords e description
+    pa.click(x=935, y=528)
+    pc.copy(title + cidades[i])
+    pa.hotkey("ctrl", "v")
+    pa.press("tab")
+    pc.copy(kywords)
+    pa.hotkey("ctrl", "v")
+    pa.press("tab")
+    pc.copy(description)
+    pa.hotkey("ctrl", "v")
+    pa.press("tab")
+    pa.press("enter")
+
+    #salvar e fechar aba
     pa.hotkey("ctrl", "w")
 
-    print(f"{cidades[i]}")
+    print(f"Pagina da cidade{cidades[i]} criada com sucesso!")
