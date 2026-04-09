@@ -1,3 +1,21 @@
+"""
+Automação de edição de páginas no painel administrativo.
+
+Este script utiliza PyAutoGUI para automatizar a criação e edição de páginas
+em um sistema web, substituindo o conteúdo HTML com base em uma lista de cidades.
+
+Para cada cidade:
+- Abre uma nova aba no navegador
+- Acessa a página administrativa
+- Busca pelo produto + nome da cidade
+- Entra no modo de edição
+- Substitui todo o conteúdo da página por um template HTML dinâmico
+- Insere automaticamente o nome da cidade no conteúdo
+
+Objetivo: agilizar a criação/atualização em massa de páginas personalizadas
+para diferentes localidades.
+"""
+
 #IMPORTS
 import pyautogui as pa
 import pyperclip as pc
