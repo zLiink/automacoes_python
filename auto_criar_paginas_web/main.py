@@ -261,7 +261,7 @@ for i in range(len(cidades)):
     pa.press("tab")
     
     #salvar e fechar aba
-    pa.hotkey("ctrl", "w")
     pa.press("enter")
-
+    pa.hotkey("ctrl", "w")
+    
     print(f"Pagina da cidade {cidades[i]} criada com sucesso!")
