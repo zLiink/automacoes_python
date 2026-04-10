@@ -61,7 +61,7 @@ def run_automacao(campanhas):
         pa.click(x=321, y=299)
 
         #carregar click nova campanha
-        tm.sleep(8)
+        tm.sleep(11)
 
         pa.click(x=842, y=415)
         tm.sleep(0.4)
@@ -146,12 +146,7 @@ def run_automacao(campanhas):
         pa.press("enter")
         tm.sleep(2.5)
 
-        for _ in range(6):
-            pa.press("tab")
-            tm.sleep(0.3)
-
-        pa.press("enter")
-        tm.sleep(0.7)
+        pa.click(x=962, y=391)
         pc.copy(complemento_do_assunto)
         pa.hotkey("ctrl", "v")
         tm.sleep(0.7)
@@ -166,7 +161,8 @@ def run_automacao(campanhas):
         pa.press("enter")
         tm.sleep(2)
 
-        pa.click(x=782, y=390)
+        #adicionar tags do Google Analytics
+        pa.click(x=638, y=429)
         tm.sleep(0.4)
         pa.press("tab")
         pc.copy(tags)
