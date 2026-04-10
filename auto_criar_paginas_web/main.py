@@ -26,13 +26,6 @@ pa.PAUSE = 0.7
 
 #cidades
 cidades = [
-    "São Bernardo do Campo",
-    "Santo André",
-    "Osasco",
-    "São José dos Campos",
-    "Ribeirão Preto",
-    "Sorocaba",
-    "Barueri",
     "Jundiaí",
     "São José do Rio Preto",
     "Santos",
@@ -266,9 +259,9 @@ for i in range(len(cidades)):
     pc.copy(description)
     pa.hotkey("ctrl", "v")
     pa.press("tab")
-    #pa.press("enter")
-
+    
     #salvar e fechar aba
-    #pa.hotkey("ctrl", "w")
+    pa.hotkey("ctrl", "w")
+    pa.press("enter")
 
     print(f"Pagina da cidade {cidades[i]} criada com sucesso!")
