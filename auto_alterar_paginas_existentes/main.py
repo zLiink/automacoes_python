@@ -170,6 +170,7 @@ for i in range(len(cidades)):
     pa.hotkey("ctrl", "v")
 
     #descer a pagina para preencher os campos de title, keywords e description
+    pa.click(x=1717, y=534) #posicao fora do editor de txto para evitar interferencia
     pa.press("down", presses=70)
 
     #variavel do title
@@ -179,19 +180,22 @@ for i in range(len(cidades)):
 
     #preencher campos  title, keywords e description
     pa.click(x=935, y=528)
+    pa.hotkey("ctrl", "a")
     pc.copy(title)
     pa.hotkey("ctrl", "v")
     pa.press("tab")
+    pa.hotkey("ctrl", "a")
     pc.copy(keywords)
     pa.hotkey("ctrl", "v")
     pa.press("tab")
+    pa.hotkey("ctrl", "a")
     pc.copy(description)
     pa.hotkey("ctrl", "v")
     pa.press("tab")
     
     #salvar e fechar aba
     pa.press("f3")
-    #pa.hotkey("ctrl", "w")
+    pa.hotkey("ctrl", "w")
     
     print(f"Pagina da cidade {cidades[i]} alterada com sucesso!")
 
