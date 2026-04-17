@@ -169,13 +169,13 @@ for i in range(len(cidades)):
     pc.copy(cod_pagina)
     pa.hotkey("ctrl", "v")
 
+    #descer a pagina para preencher os campos de title, keywords e description
+    pa.press("down", presses=70)
+
     #variavel do title
     title = f"Gráfica em {cidades[i]} com Impressão Rápida e Alta Qualidade"
     keywords = f"gráfica em {cidades[i]}, gráfica {cidades[i]} rj, gráfica rápida {cidades[i]}, impressão digital {cidades[i]}, brindes personalizados {cidades[i]}, gráfica online {cidades[i]}, serviços gráficos {cidades[i]}, impressão de alta qualidade {cidades[i]}, gráfica para empresas {cidades[i]}"
     description = f"Precisa de gráfica em {cidades[i]}? Impressos com alta qualidade, produção rápida e atendimento ágil. Solicite seu orçamento agora mesmo! ⚡"
-
-    #descer a pagina para preencher os campos de title, keywords e description
-    pa.press("down", presses=70)
 
     #preencher campos  title, keywords e description
     pa.click(x=935, y=528)
