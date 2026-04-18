@@ -28,7 +28,158 @@ pa.PAUSE = 0.7
 
 #cidades
 cidades = [
-    "Minas Novas",
+#"Porto Alegre",
+"Minas Novas",
+"Nova Friburgo",
+"Anápolis",
+"Viamão",
+"São Paulo",
+"Jaboatão dos Guararapes",
+"Patos de Minas",
+"Maricá",
+"Mauá",
+"Guaíba",
+"Juazeiro do Norte",
+"Mogi das Cruzes",
+"Diadema",
+#"Santarém",
+"Santa Maria",
+"Guarulhos",
+"Passo Fundo",
+"Joinville",
+"Betim",
+"Maringá",
+"Londrina",
+"Chapecó",
+"Criciúma",
+"Blumenau",
+"Florianópolis",
+"Pelotas",
+"Rio Grande",
+"São José do Rio Preto",
+"Campina Grande",
+"Bento Gonçalves",
+"Alegrete",
+"João Pessoa",
+"Parobé",
+"Dois Irmãos",
+"Cascavel",
+"Feira de Santana",
+"Bagé",
+"Porto Seguro",
+"Duque de Caxias",
+"Glorinha",
+"Eldorado do Sul",
+"Maceió",
+"Santo Ângelo",
+"Itapetininga",
+"Curitiba",
+"Belém",
+"Recife",
+"Santa Rosa",
+"Belford Roxo",
+"Santos",
+"Ribeirão Preto",
+"São José dos Campos",
+"Mogi Guaçu",
+"Nilópolis",
+"Caxias do Sul",
+"Santo André",
+"São João de Meriti",
+"São Leopoldo",
+"Osasco",
+"Aparecida de Goiânia",
+"Ananindeua",
+"Macapá",
+"Rio Branco",
+"São Vicente",
+"Vitória",
+"Vitória da Conquista",
+"Ponta Grossa",
+"Petrolina",
+"Paulista",
+"Uberaba",
+"Boa Vista",
+"Ribeirão das Neves",
+"São Bernardo do Campo",
+"Campinas",
+"Juiz de Fora",
+"Rio das Ostras",
+"Resende",
+"Araruama",
+"Itaguaí",
+"Japeri",
+"Itaperuna",
+"São Pedro da Aldeia",
+"Manaus",
+"Goiânia",
+"Aracaju",
+"Mesquita",
+"Queimados",
+"Barra Mansa",
+"Nova Friburgo",
+"Angra dos Reis",
+"Cabo Frio",
+"Itaboraí",
+"Macaé",
+"Magé",
+"Volta Redonda",
+"Suzano",
+"Porto Velho",
+"Pindamonhangaba",
+"Venâncio Aires",
+"Nova Iguaçu",
+"Serra",
+"Bauru",
+"Cariacica",
+"Piracicaba",
+"Gramado",
+"Montes Claros",
+"Natal",
+"São José dos Pinhais",
+"Petrópolis",
+"Palmas",
+"Campos dos Goytacazes",
+"Bragança Paulista",
+"Várzea Grande",
+"Sapucaia do Sul",
+"Taboão da Serra",
+"Campo Bom",
+"Governador Valadares",
+"Uberlândia",
+"Camaçari",
+"Teresina",
+"Uruguaiana",
+"Pouso Alegre",
+"Niterói",
+"Charqueadas",
+"Sapiranga",
+"Alvorada",
+"Campo Grande",
+"Palhoça",
+"Salvador",
+"Brasília",
+"Esteio",
+"Novo Hamburgo",
+"Olinda",
+"São Luís",
+"Nova Santa Rita",
+"Gravataí",
+"Cruzeiro do Sul",
+"São Gonçalo",
+"Carapicuíba",
+"Valparaíso de Goiás",
+"Cachoeirinha",
+"Mossoró",
+"Vila Velha",
+"Belo Horizonte",
+"Contagem",
+"Jundiaí",
+"Santana do Livramento",
+"Lajeado",
+"Sorocaba",
+"Fortaleza",
+"Canoas"
 ]
 
 #TEMPO P/ INÍCIO AUTO
@@ -61,46 +212,38 @@ for i in range(len(cidades)):
 
     #codigo da pagina
     cod_pagina = f"""
-    <!-- Topo -->
+    <!--Topo-->
 <x-page id="4356" />
 
-<div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding: 6px 6px;">
-
-    <h1 style="font-size: clamp(18px, 5vw, 28px); margin: 0 0 1px 0; max-width: 90%;">
+<!--Conteudo variado 1-->
+<div style="text-align:center; padding: 6px;">
+    <h1 style="font-size: clamp(18px, 5vw, 28px); margin: 0 0 4px;">
         Gráfica Online com Entrega Rápida em {cidades[i]}
     </h1>
 
-    <span style="color:#6b6b6b; font-size:1.0rem; line-height:1.3; margin-bottom:6px;">
+    <p style="color:#6b6b6b; font-size:1rem; line-height:1.3;">
         Impressos que fortalecem sua marca.
-    </span>
-
+    </p>
 </div>
 
-<!-- Conteúdo 01 -->
+<!--Conteúdo 1-->
 <x-page id="735" />
 
-<!-- Conteúdo pagina variavel -->
-<div class="container">
-    <div style="text-align:center; padding: 20px 10px;">
+<!--Conteudo variado 2-->
+<div class="container" style="text-align:center; padding: 10px 2px;">
+    <p style="color:#6b6b6b; font-size:1.6rem; font-weight:600; letter-spacing:-0.5px; margin-bottom:8px;">
+        Sua Marca em Destaque com Impressão Profissional em <b>{cidades[i]}</b>
+    </p>
 
-        <div style="margin-bottom: 8px;">
-            <span style="color:#6b6b6b; font-size:1.6rem; font-weight:600; letter-spacing:-0.5px;">
-                Sua Marca em Destaque com Impressão Profissional em <b>{cidades[i]}</b>
-            </span>
-        </div>
+    <p style="color:#6b6b6b; font-size:1.3rem; line-height:1.5;">
+        Qualidade profissional para empresas que querem se <b>destacar</b>.
+    </p>
+</div>
 
-        <div>
-            <span style="color:#6b6b6b; font-size:1.3rem; line-height:1.5;">
-                Qualidade profissional para empresas que querem se <b>destacar</b>.
-            </span>
-        </div>
-    </div>
-</div> <!-- fecha container -->
-
-<!-- Conteúdo 02 -->
+<!--Conteúdo 2-->
 <x-page id="4351" />
 
-<!-- TEXTO SEO -->
+<!--TEXTO SEO-->
 <div style="max-width: 1220px; margin: 0 auto; padding: 20px;">
     <h2>
         <strong>Gráfica em {cidades[i]}</strong>: Impressão de Qualidade e Estratégia de Entrega Rápida
@@ -161,7 +304,7 @@ for i in range(len(cidades)):
 	<x-page id="3952"/>
 </div>
 
-<!-- COMENTÁRIOS DE CLIENTES -->
+<!--COMENTÁRIOS DE CLIENTES-->
 <x-page id="25"/>
 <br/>"""
 
