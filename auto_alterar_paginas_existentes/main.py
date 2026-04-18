@@ -24,7 +24,7 @@ from time import sleep
 #VARIAVEIS
 webpage = "https://expanssiva.com.br/admin#/pages"
 produto_busca = "Gráfica em "
-pa.PAUSE = 0.7
+pa.PAUSE = 0.4
 
 #cidades
 cidades = [
@@ -190,7 +190,7 @@ for i in range(len(cidades)):
     pa.hotkey("ctrl", "t")
     pa.write(webpage)
     pa.press("enter")
-    sleep(1.5)
+    sleep(1)
 
     #pesquisar cidade
     pc.copy(produto_busca)
@@ -212,38 +212,46 @@ for i in range(len(cidades)):
 
     #codigo da pagina
     cod_pagina = f"""
-    <!--Topo-->
+    <!-- Topo -->
 <x-page id="4356" />
 
-<!--Conteudo variado 1-->
-<div style="text-align:center; padding: 6px;">
-    <h1 style="font-size: clamp(18px, 5vw, 28px); margin: 0 0 4px;">
+<div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding: 6px 6px;">
+
+    <h1 style="font-size: clamp(18px, 5vw, 28px); margin: 0 0 1px 0; max-width: 90%;">
         Gráfica Online com Entrega Rápida em {cidades[i]}
     </h1>
 
-    <p style="color:#6b6b6b; font-size:1rem; line-height:1.3;">
+    <span style="color:#6b6b6b; font-size:1.0rem; line-height:1.3; margin-bottom:6px;">
         Impressos que fortalecem sua marca.
-    </p>
+    </span>
+
 </div>
 
-<!--Conteúdo 1-->
+<!-- Conteúdo 01 -->
 <x-page id="735" />
 
-<!--Conteudo variado 2-->
-<div class="container" style="text-align:center; padding: 10px 2px;">
-    <p style="color:#6b6b6b; font-size:1.6rem; font-weight:600; letter-spacing:-0.5px; margin-bottom:8px;">
-        Sua Marca em Destaque com Impressão Profissional em <b>{cidades[i]}</b>
-    </p>
+<!-- Conteúdo pagina variavel -->
+<div class="container">
+    <div style="text-align:center; padding: 20px 10px;">
 
-    <p style="color:#6b6b6b; font-size:1.3rem; line-height:1.5;">
-        Qualidade profissional para empresas que querem se <b>destacar</b>.
-    </p>
-</div>
+        <div style="margin-bottom: 8px;">
+            <span style="color:#6b6b6b; font-size:1.6rem; font-weight:600; letter-spacing:-0.5px;">
+                Sua Marca em Destaque com Impressão Profissional em <b>{cidades[i]}</b>
+            </span>
+        </div>
 
-<!--Conteúdo 2-->
+        <div>
+            <span style="color:#6b6b6b; font-size:1.3rem; line-height:1.5;">
+                Qualidade profissional para empresas que querem se <b>destacar</b>.
+            </span>
+        </div>
+    </div>
+</div> <!-- fecha container -->
+
+<!-- Conteúdo 02 -->
 <x-page id="4351" />
 
-<!--TEXTO SEO-->
+<!-- TEXTO SEO -->
 <div style="max-width: 1220px; margin: 0 auto; padding: 20px;">
     <h2>
         <strong>Gráfica em {cidades[i]}</strong>: Impressão de Qualidade e Estratégia de Entrega Rápida
@@ -295,16 +303,18 @@ for i in range(len(cidades)):
 </h3>
 
 <p>
-    Um dos grandes receios de quem contrata serviços fora de sua cidade é o prazo e o suporte. Nós resolvemos isso com uma <strong>rede logística otimizada</strong> para o estado do Rio de Janeiro. Possuímos uma vasta carteira de clientes em <strong>{cidades[i]}</strong> e arredores, e a entrega é feita de forma super rápida através de parcerias estratégicas que garantem preços competitivos de frete, tanto para pequenos volumes quanto para grandes demandas industriais.
+Um dos grandes receios ao contratar serviços externos é a incerteza quanto aos prazos e ao suporte técnico. Nós eliminamos essa barreira com uma rede logística otimizada desenhada para atender a sua localidade com máxima eficiência.
 </p>
 
 <p>
-    Além da rapidez, todos os pedidos são acompanhados por um <strong>consultor técnico</strong> exclusivo. Este profissional mantém contato constante com você durante todas as etapas — da conferência do arquivo à expedição — garantindo uma experiência satisfatória do início ao fim. Para nós, a tecnologia é o meio, mas o sucesso das pessoas em <strong>{cidades[i]}</strong> é o nosso objetivo final. Você pode realizar simulações de prazos e valores diretamente em nosso site e comprovar a eficiência do nosso modelo de negócio.
+    Além da rapidez, todos os pedidos são acompanhados por um <strong>consultor técnico</strong> exclusivo. Este profissional mantém contato constante com você durante todas as etapas — da conferência do arquivo à expedição — garantindo uma experiência satisfatória do início ao fim. 
+	<br><br>
+	Para nós, a tecnologia é o meio, mas o sucesso das pessoas em <strong>{cidades[i]}</strong> é o nosso objetivo final. Você pode realizar simulações de prazos e valores diretamente em nosso site e comprovar a eficiência do nosso modelo de negócio.
 </p>
 	<x-page id="3952"/>
 </div>
 
-<!--COMENTÁRIOS DE CLIENTES-->
+<!-- COMENTÁRIOS DE CLIENTES -->
 <x-page id="25"/>
 <br/>"""
 
