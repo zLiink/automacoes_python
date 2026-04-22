@@ -124,7 +124,7 @@ Somos um modelo inovador de <strong><a href="/" title="Gráfica Online com Entre
 
 <!-- ##BLOCO_VAR_1## -->
 <p style="font-family:'Montserrat',Arial,sans-serif; font-size:0.95rem; color:#555; line-height:1.8; margin:0 0 28px;">
-{cidade} tem forte ligação com a identidade cultural do Vale do Jequitinhonha, o que valoriza materiais gráficos com apelo regional e apresentação profissional. Para empresas, comércios e ações institucionais em {cidade}, a papelaria personalizada ajuda a reforçar presença, organização e credibilidade no atendimento. Uma gráfica online atende {cidade} com mais praticidade para pedidos de cartões, pastas, receituários, envelopes e materiais promocionais.
+{bloco_1}
 </p>
 		
 <h3 style="font-family:'Montserrat',Arial,sans-serif; font-size:1.1rem; font-weight:700; color:#222; margin:0 0 20px; border-left:4px solid #f6631d; padding-left:12px;">
@@ -166,7 +166,7 @@ Somos um modelo inovador de <strong><a href="/" title="Gráfica Online com Entre
 
 <!-- ##BLOCO_VAR_2## -->
 <p style="font-family:'Montserrat',Arial,sans-serif; font-size:0.95rem; color:#555; line-height:1.8; margin:0 0 28px;">
-A economia de {cidade} mantém relação importante com agricultura familiar, comércio local, serviços e atividades ligadas ao artesanato regional. Em {cidade}, brindes corporativos e impressos bem produzidos apoiam divulgações, eventos, campanhas e a comunicação de negócios com identidade visual consistente. Itens como blocos, calendários, etiquetas, folders e papel timbrado funcionam bem para diferentes rotinas profissionais na cidade.		
+{bloco_2}
 </p>
 		
 <h3 style="font-family:'Montserrat',Arial,sans-serif; font-size:1.1rem; font-weight:700; color:#222; margin:0 0 12px; border-left:4px solid #f6631d; padding-left:12px;">
@@ -258,7 +258,7 @@ Todos os pedidos são acompanhados por um <strong style="color:#222;">consultor 
 
 <!-- ##BLOCO_VAR_3## -->
 		<p style="font-family:'Montserrat',Arial,sans-serif; font-size:0.95rem; color:#555; line-height:1.8; margin:0 0 28px;">
-Para quem atua em {cidade}, contar com uma gráfica online facilita a reposição de materiais e a padronização da comunicação da marca. Em {cidade}, papelaria corporativa e brindes personalizados ajudam empresas, lojas e prestadores de serviço a fortalecer relacionamento e lembrança de marca. É uma solução eficiente para manter apresentação comercial alinhada com as demandas locais e institucionais.
+{bloco_3}
 </p>
 <!-- CTA FINAL — FIXO -->
 <div style="background:#1a1a1a; border-radius:12px; padding:28px 24px; text-align:center; margin:0 0 8px;">
