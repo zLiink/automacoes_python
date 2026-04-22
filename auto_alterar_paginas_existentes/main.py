@@ -23,163 +23,111 @@ from time import sleep
 
 #VARIAVEIS
 webpage = "https://expanssiva.com.br/admin#/pages"
-produto_busca = "Gráfica em "
+produto_busca = "Folders Personalizados em "
 pa.PAUSE = 0.4
 
 #cidades
 cidades = [
-#"Porto Alegre",
-"Minas Novas",
-"Nova Friburgo",
-"Anápolis",
-"Viamão",
-"São Paulo",
-"Jaboatão dos Guararapes",
-"Patos de Minas",
-"Maricá",
-"Mauá",
+"Sapiranga",
+"Santana do Livramento",
+"Ijuí",
 "Guaíba",
-"Juazeiro do Norte",
-"Mogi das Cruzes",
-"Diadema",
-#"Santarém",
-"Santa Maria",
-"Guarulhos",
+"Erechim",
+"Bento Gonçalves",
+"Uruguaiana",
+"Cachoeirinha",
+"Santa Cruz do Sul",
+"Alvorada",
+"Rio Grande",
 "Passo Fundo",
-"Joinville",
-"Betim",
-"Maringá",
-"Londrina",
-"Chapecó",
+"São Leopoldo",
+"Viamão",
+"Novo Hamburgo",
+"Gravataí",
+"Santa Maria",
+"Pelotas",
+"Canoas",
+"Caxias do Sul",
+"Porto Alegre",
+"Tubarão",
+"Brusque",
+"Balneário Camboriú",
+"Lages",
+"Palhoça",
+"Jaraguá do Sul",
 "Criciúma",
+"Chapecó",
+"Itajaí",
+"São José",
 "Blumenau",
 "Florianópolis",
-"Pelotas",
-"Rio Grande",
-"São José do Rio Preto",
-"Campina Grande",
-"Bento Gonçalves",
-"Alegrete",
-"João Pessoa",
-"Parobé",
-"Dois Irmãos",
+"Joinville",
+"Umuarama",
+"Arapongas",
+"Pinhais",
+"Apucarana",
+"Toledo",
+"Araucária",
+"Guarapuava",
+"Colombo",
+"Foz do Iguaçu",
+"São José dos Pinhais",
 "Cascavel",
-"Feira de Santana",
-"Bagé",
-"Porto Seguro",
-"Duque de Caxias",
-"Glorinha",
-"Eldorado do Sul",
-"Maceió",
-"Santo Ângelo",
-"Itapetininga",
+"Ponta Grossa",
+"Maringá",
+"Londrina",
 "Curitiba",
-"Belém",
-"Recife",
-"Santa Rosa",
-"Belford Roxo",
+"Passos",
+"Araguari",
+"Patos de Minas",
+"Governador Valadares",
+"Ribeirão das Neves",
+"Nova Lima",
+"Pouso Alegre",
+"Ibirité",
+"Poços de Caldas",
+"Divinópolis",
+"Santa Luzia",
+"Sete Lagoas",
+"Ipatinga",
+"Uberaba",
+"Montes Claros",
+"Betim",
+"Juiz de Fora",
+"Contagem",
+"Uberlândia",
+"Belo Horizonte",
+"Araraquara",
+"Itu",
+"Marília",
+"Taboão da Serra",
+"Sumaré",
+"Limeira",
+"Hortolândia",
+"Presidente Prudente",
+"Jacareí",
+"Cotia",
+"São Caetano do Sul",
+"Americana",
+"Franca",
+"Itaquaquecetuba",
+"Indaiatuba",
+"Piracicaba",
+"Mogi das Cruzes",
 "Santos",
+"São José do Rio Preto",
+"Jundiaí",
+"Barueri",
+"Jundiaí",
+"São José do Rio Preto",
+"Sorocaba",
 "Ribeirão Preto",
 "São José dos Campos",
-"Mogi Guaçu",
-"Nilópolis",
-"Caxias do Sul",
-"Santo André",
-"São João de Meriti",
-"São Leopoldo",
 "Osasco",
-"Aparecida de Goiânia",
-"Ananindeua",
-"Macapá",
-"Rio Branco",
-"São Vicente",
-"Vitória",
-"Vitória da Conquista",
-"Ponta Grossa",
-"Petrolina",
-"Paulista",
-"Uberaba",
-"Boa Vista",
-"Ribeirão das Neves",
+"Santo André",
 "São Bernardo do Campo",
-"Campinas",
-"Juiz de Fora",
-"Rio das Ostras",
-"Resende",
-"Araruama",
-"Itaguaí",
-"Japeri",
-"Itaperuna",
-"São Pedro da Aldeia",
-"Manaus",
-"Goiânia",
-"Aracaju",
-"Mesquita",
-"Queimados",
-"Barra Mansa",
-"Nova Friburgo",
-"Angra dos Reis",
-"Cabo Frio",
-"Itaboraí",
-"Macaé",
-"Magé",
-"Volta Redonda",
-"Suzano",
-"Porto Velho",
-"Pindamonhangaba",
-"Venâncio Aires",
-"Nova Iguaçu",
-"Serra",
-"Bauru",
-"Cariacica",
-"Piracicaba",
-"Gramado",
-"Montes Claros",
-"Natal",
-"São José dos Pinhais",
-"Petrópolis",
-"Palmas",
-"Campos dos Goytacazes",
-"Bragança Paulista",
-"Várzea Grande",
-"Sapucaia do Sul",
-"Taboão da Serra",
-"Campo Bom",
-"Governador Valadares",
-"Uberlândia",
-"Camaçari",
-"Teresina",
-"Uruguaiana",
-"Pouso Alegre",
-"Niterói",
-"Charqueadas",
-"Sapiranga",
-"Alvorada",
-"Campo Grande",
-"Palhoça",
-"Salvador",
-"Brasília",
-"Esteio",
-"Novo Hamburgo",
-"Olinda",
-"São Luís",
-"Nova Santa Rita",
-"Gravataí",
-"Cruzeiro do Sul",
-"São Gonçalo",
-"Carapicuíba",
-"Valparaíso de Goiás",
-"Cachoeirinha",
-"Mossoró",
-"Vila Velha",
-"Belo Horizonte",
-"Contagem",
-"Jundiaí",
-"Santana do Livramento",
-"Lajeado",
-"Sorocaba",
-"Fortaleza",
-"Canoas"
+"Guarulhos",
+"São Paulo"
 ]
 
 #TEMPO P/ INÍCIO AUTO
@@ -190,7 +138,7 @@ for i in range(len(cidades)):
     pa.hotkey("ctrl", "t")
     pa.write(webpage)
     pa.press("enter")
-    sleep(1)
+    sleep(1.5)
 
     #pesquisar cidade
     pc.copy(produto_busca)
@@ -212,110 +160,108 @@ for i in range(len(cidades)):
 
     #codigo da pagina
     cod_pagina = f"""
-    <!-- Topo -->
-<x-page id="4356" />
+    <!--Topo-->
+<x-page id="4326" />
 
-<div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding: 6px 6px;">
-
-    <h1 style="font-size: clamp(18px, 5vw, 28px); margin: 0 0 1px 0; max-width: 90%;">
-        Gráfica Online com Entrega Rápida em {cidades[i]}
+<!--Conteudo variado 1-->
+<div style="text-align:center; padding: 9px;">
+    <h1 style="font-size: clamp(18px, 5vw, 26px); margin: 0 0 4px;">
+        Impressão de Folders com Entrega Rápida em {cidades[i]}
     </h1>
 
-    <span style="color:#6b6b6b; font-size:1.0rem; line-height:1.3; margin-bottom:6px;">
-        Impressos que fortalecem sua marca.
-    </span>
-
+    <p style="color:#6b6b6b; font-size:1rem; line-height:1.3;">
+        Produção ágil e impressão de alto padrão para divulgar sua empresa com resultado.
+    </p>
 </div>
 
-<!-- Conteúdo 01 -->
-<x-page id="735" />
+<!--Conteúdo 1-->
+<x-page id="4327" />
 
-<!-- Conteúdo pagina variavel -->
-<div class="container">
-    <div style="text-align:center; padding: 20px 10px;">
-
-        <div style="margin-bottom: 8px;">
-            <span style="color:#6b6b6b; font-size:1.6rem; font-weight:600; letter-spacing:-0.5px;">
-                Sua Marca em Destaque com Impressão Profissional em <b>{cidades[i]}</b>
-            </span>
-        </div>
-
-        <div>
-            <span style="color:#6b6b6b; font-size:1.3rem; line-height:1.5;">
-                Qualidade profissional para empresas que querem se <b>destacar</b>.
-            </span>
-        </div>
-    </div>
-</div> <!-- fecha container -->
-
-<!-- Conteúdo 02 -->
-<x-page id="4351" />
-
-<!-- TEXTO SEO -->
-<div style="max-width: 1220px; margin: 0 auto; padding: 20px;">
-    <h2>
-        <strong>Gráfica em {cidades[i]}</strong>: Impressão de Qualidade e Estratégia de Entrega Rápida
-    </h2>
-
-    <p>
-    Somos um modelo inovador de <strong><a href="/" title="Gráfica Online com Entrega Rápida de Papelaria e Brindes">gráfica online</a></strong>, projetado para romper as barreiras da distância e oferecer para <strong>{cidades[i]}</strong> o que há de mais moderno em tecnologia de impressão. Nossa missão é unir qualidade impecável, preço de fábrica e uma criatividade sem limites, permitindo que sua marca atinja objetivos ambiciosos em todas as frentes de divulgação, desde o ambiente físico até o digital.
-</p>
-
-<p>
-    Entendemos que o mercado de <strong>{cidades[i]}</strong> exige agilidade e um padrão estético superior. Por isso, nossa plataforma não funciona apenas como um balcão de pedidos, mas como um parceiro estratégico. Ao escolher nossos serviços, você elimina intermediários e acessa um fluxo de produção industrial de alta performance, garantindo que cada impresso seja uma ferramenta real de conversão para o seu negócio.
-</p>
-
-<h3 style="font-size:20px; color:#333;">
-    Papelaria Corporativa de Alto Padrão em <strong>{cidades[i]}</strong>
-</h3>
-
-<p>
-    A <strong>
-        <a href="/papelaria-personalizada" title="Papelaria Personalizada para Empresas com Impressão Profissional">
-    papelaria personalizada
-</a>
-    </strong>
-    é, muitas vezes, o primeiro ponto de contato físico entre sua empresa e seu cliente. Em <strong>{cidades[i]}</strong>, onde o profissionalismo é um diferencial competitivo, oferecemos soluções completas: cartões de visita com acabamentos especiais (como laminação fosca e verniz localizado), papéis timbrados que transmitem credibilidade, pastas profissionais, envelopes e blocos de notas personalizados.
-</p>
-
-<p>
-    Cada detalhe da nossa <strong>impressão gráfica</strong> é calibrado para garantir a fidelidade das cores da sua identidade visual. Ter uma papelaria coordenada e bem impressa não é apenas um custo, mas um investimento em autoridade que fortalece a percepção de valor da sua marca diante do público teresopolitano.
-</p>
-
-<h3 style="font-size:20px; color:#333;">
-    Brindes Personalizados: Fidelização e Presença de Marca
-</h3>
-
-<p>
-    Para quem busca <strong>
-       <a href="/brindes-personalizados" title="Brindes Personalizados para Empresas com Alta Qualidade">
-    brindes personalizados
-</a> em {cidades[i]}
-    </strong>, oferecemos um catálogo diversificado que transforma itens cotidianos em embaixadores da sua marca. De canetas e squeezes a agendas e kits corporativos luxuosos, nossa linha de produtos é pensada para criar conexões emocionais. Além da papelaria, nossa expertise se estende à <strong>comunicação visual</strong>, com banners, adesivos e embalagens que garantem um <i>unboxing</i> memorável para seus clientes.
-</p>
-
-<p>
-    O grande diferencial de nossos <strong>brindes personalizados</strong> é a durabilidade e o design. Entendemos que um brinde de baixa qualidade pode prejudicar sua imagem; por isso, selecionamos materiais resistentes e técnicas de gravação avançadas, assegurando que sua logomarca permaneça em evidência por muito mais tempo na rotina dos seus parceiros em <strong>{cidades[i]}</strong>.
-</p>
-
-<h3 style="font-size:20px; color:#333;">
-    Logística Inteligente e Consultoria Dedicada para <strong>{cidades[i]}</strong>
-</h3>
-
-<p>
-Um dos grandes receios ao contratar serviços externos é a incerteza quanto aos prazos e ao suporte técnico. Nós eliminamos essa barreira com uma rede logística otimizada desenhada para atender a sua localidade com máxima eficiência.
-</p>
-
-<p>
-    Além da rapidez, todos os pedidos são acompanhados por um <strong>consultor técnico</strong> exclusivo. Este profissional mantém contato constante com você durante todas as etapas — da conferência do arquivo à expedição — garantindo uma experiência satisfatória do início ao fim. 
-	<br><br>
-	Para nós, a tecnologia é o meio, mas o sucesso das pessoas em <strong>{cidades[i]}</strong> é o nosso objetivo final. Você pode realizar simulações de prazos e valores diretamente em nosso site e comprovar a eficiência do nosso modelo de negócio.
-</p>
-	<x-page id="3952"/>
+<!--Conteudo variado 2-->
+<div style="text-align:center; padding: 10px 2px; background:#f6631d; border-radius:0px;">
+    <p style="color:#ffffff; font-size:1.6rem; font-weight:600; letter-spacing:-0.5px; margin-bottom:10px;">
+        Sua Marca em Destaque com Impressão Profissional em <b>{cidades[i]}</b>
+    </p>
+    <p style="color:#ffffff; font-size:1.3rem; line-height:1.5;">
+        Qualidade profissional para empresas que querem se <b>destacar</b>.
+    </p>
 </div>
 
-<!-- COMENTÁRIOS DE CLIENTES -->
-<x-page id="25"/>
+<!--TEXTO SEO-->
+<div class="container" style="padding: 20px 2px;">
+    <article>
+        <h2>Impressão de Folders em {cidades[i]}: A Solução Ideal para sua Divulgação</h2>
+
+        <p>
+            Se você está buscando <strong>impressão de folders em {cidades[i]}</strong>, sabe que a agilidade e a qualidade do material são fundamentais para o sucesso de uma estratégia de marketing offline. Em uma cidade com economia pulsante e um setor de serviços tão competitivo, apresentar sua empresa com um material gráfico de alto padrão não é apenas um detalhe, é uma necessidade estratégica para se destacar no mercado campineiro.
+        </p>
+
+        <p>
+            Nossa plataforma atua como uma gráfica online especializada, conectando as necessidades das empresas de <strong>{cidades[i]}</strong> às melhores tecnologias de impressão digital e offset. Seja para um evento corporativo ou para prospecção direta nos bairros mais movimentados da cidade, entregamos folders que comunicam autoridade e profissionalismo, integrando perfeitamente o seu mix de <strong><a href="/papelaria-personalizada">papelaria</a></strong> institucional.
+        </p>
+
+        <h2>Folders Personalizados em {cidades[i]} com Entrega Rápida</h2>
+
+        <p>
+            Entendemos que para o empresário local o tempo é um recurso escasso. Por isso, otimizamos nossa logística para garantir que a <strong>entrega de <a href="/categoria/folders">folders em {cidades[i]}</a></strong> seja feita com o máximo de eficiência. Ao optar por nossa gráfica online, você tem a conveniência de fazer o pedido sem sair do seu escritório, contando com um sistema de rastreio moderno e prazos que respeitam o cronograma de vendas da sua empresa.
+        </p>
+
+        <p>
+            Atendemos desde pequenos comércios locais até grandes indústrias instaladas nos principais polos comerciais de <strong>{cidades[i]}</strong>. Nosso foco é garantir que o seu material promocional chegue em suas mãos com cores vibrantes e acabamento impecável, reforçando a identidade visual da sua marca em toda a cidade.
+        </p>
+
+        <h3>Modelos e Utilidades para sua Estratégia em {cidades[i]}</h3>
+
+        <ul>
+            <li><strong>Folder 1 dobra:</strong> Conhecido como meia dobra, é ideal para comunicados diretos, convites corporativos e apresentações rápidas de impacto.</li>
+            <li><strong>Folder 2 dobras:</strong> O formato mais versátil, excelente para apresentações institucionais, lançamentos de produtos e materiais de vendas estruturados.</li>
+            <li><strong>Folder 3 dobras (Sanfona ou Carteira):</strong> Oferece maior área útil, sendo perfeito para guias detalhados de serviços, manuais de produtos e fluxos de informações complexas.</li>
+            <li><strong>Papel Couchê 90g a 150g:</strong> Proporciona o equilíbrio ideal entre custo-benefício, resistência e qualidade de impressão para grandes tiragens.</li>
+            <li><strong>Acabamentos Premium:</strong> Aplicações de verniz total ou localizado que elevam o status do material, garantindo um impacto visual profissional e duradouro.</li>
+        </ul>
+
+        <h2>Por que escolher nossa Gráfica Online para atender {cidades[i]}?</h2>
+
+        <p>
+            Muitos clientes buscam por <strong>onde fazer folders em {cidades[i]}</strong> e precisam de uma solução que una qualidade de agência e preço de fábrica. Nossa proposta é oferecer exatamente isso para quem precisa contratar <strong>folders para empresas em {cidades[i]}</strong>, com a facilidade de um processo 100% digital e suporte especializado.
+        </p>
+
+        <ol>
+            <li><strong>Custo-benefício superior:</strong> Preços competitivos com acabamento profissional em toda a linha de materiais impressos.</li>
+            <li><strong>Tecnologia de ponta:</strong> Impressoras de última geração que garantem fidelidade de cores em CMYK e alta definição.</li>
+            <li><strong>Facilidade no Orçamento:</strong> Sistema intuitivo para selecionar configurações e visualizar o investimento da sua campanha na hora.</li>
+        </ol>
+
+        <h2>Folders em {cidades[i]}: Impacto Visual que Converte Clientes Reais</h2>
+
+        <p>
+            A distribuição de material impresso continua sendo uma das formas mais eficazes de conversão em <strong>{cidades[i]}</strong>. O uso de <strong>folders personalizados preço</strong> justo permite que você escale sua panfletagem sem comprometer o orçamento. Para maximizar o impacto das suas ações, considere integrar o uso de folders com <strong><a href="/brindes-personalizados">brindes corporativos</a></strong> personalizados, criando uma experiência de marca muito mais poderosa e memorável.
+        </p>
+
+        <p>
+            O folder é uma ferramenta tátil: ele permanece na mesa do seu cliente, garantindo que sua mensagem seja lembrada por muito mais tempo. Em uma cidade dinâmica como <strong>{cidades[i]}</strong>, essa presença física e a qualidade da sua <strong>papelaria</strong> são diferenciais importantes frente à concorrência digital.
+        </p>
+
+        <h3>Dicas para um Layout de Folder que Gere Resultados</h3>
+
+        <p>
+            Para que seu investimento em uma <strong>gráfica de folders rápida</strong> traga retorno, considere incluir um título chamativo que resolva uma dor do seu cliente e um <em>Call to Action</em> (CTA) claro, como um QR Code direcionando para o seu WhatsApp de vendas em <strong>{cidades[i]}</strong>.
+        </p>
+
+        <h2>Solicite sua Impressão de Folders para {cidades[i]}</h2>
+
+        <p>
+            Não deixe sua comunicação para depois. Se você busca um <strong>folder 2 dobras papel couchê</strong> ou materiais com acabamentos especiais, nossa plataforma está pronta para atender sua demanda em <strong>{cidades[i]}</strong> com agilidade. Configuramos nossos processos para oferecer a melhor experiência de compra online de materiais gráficos e soluções para empresas.
+        </p>
+
+        <p>
+            Seja para uma feira de negócios, um lançamento regional ou para reforçar sua presença de marca, conte com nossa expertise em impressão e logística para <strong>{cidades[i]}</strong>. Garanta agora materiais profissionais que vendem por você!
+        </p>
+    </article>
+</div>
+
+<!--COMENTÁRIOS DE CLIENTES-->
+<x-page id="7236"/>
 <br/>"""
 
     #copiar e colar o codigo ja substituido
@@ -327,9 +273,9 @@ Um dos grandes receios ao contratar serviços externos é a incerteza quanto aos
     pa.press("down", presses=70)
 
     #variavel do title
-    title = f"Gráfica em {cidades[i]} com Impressão Rápida e Alta Qualidade"
-    keywords = f"gráfica em {cidades[i]}, gráfica {cidades[i]} rj, gráfica rápida {cidades[i]}, impressão digital {cidades[i]}, brindes personalizados {cidades[i]}, gráfica online {cidades[i]}, serviços gráficos {cidades[i]}, impressão de alta qualidade {cidades[i]}, gráfica para empresas {cidades[i]}"
-    description = f"Precisa de gráfica em {cidades[i]}? Impressos com alta qualidade, produção rápida e atendimento ágil. Solicite seu orçamento agora mesmo! ⚡"
+    title = f"Folders {cidades[i]} com Entrega Rápida e Alta Qualidade"
+    keywords = f"folders em {cidades[i]}, impressão de folders {cidades[i]}, folders personalizados {cidades[i]}, gráfica com entrega em {cidades[i]}, folders para empresas {cidades[i]}, onde fazer folders {cidades[i]}"
+    description = f"Folders em {cidades[i]} com produção rápida e qualidade profissional. Perfeitos para atrair clientes e fortalecer sua marca. Peça seu orçamento agora!"
 
     #preencher campos  title, keywords e description
     pa.click(x=935, y=528)
@@ -348,6 +294,7 @@ Um dos grandes receios ao contratar serviços externos é a incerteza quanto aos
     
     #salvar e fechar aba
     pa.press("f3")
+    sleep(1)
     pa.hotkey("ctrl", "w")
     
     print(f"Pagina da cidade {cidades[i]} alterada com sucesso!")
