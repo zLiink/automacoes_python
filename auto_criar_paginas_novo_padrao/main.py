@@ -265,7 +265,7 @@ Todos os pedidos são acompanhados por um <strong style="color:#222;">consultor 
     <p style="font-family:'Montserrat',Arial,sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#f6631d; margin:0 0 8px;">Pronto para começar?</p>
     <h3 style="font-family:'Montserrat',Arial,sans-serif; font-size:1.2rem; font-weight:800; color:#ffffff; margin:0 0 6px;">Simule agora o preço do seu pedido com Entrega em {cidade}</h3>
     <p style="font-family:'Montserrat',Arial,sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.55); margin:0 0 20px;">Sem compromisso. Preço na hora. Entrega garantida em {cidade}.</p>
-    <a href="/brindes-personalizados" style="display:inline-flex; align-items:center; gap:8px; background:#f6631d; color:#fff; font-family:'Montserrat',Arial,sans-serif; font-size:0.88rem; font-weight:700; padding:12px 28px; border-radius:8px; text-decoration:none;">
+    <a href="/" style="display:inline-flex; align-items:center; gap:8px; background:#f6631d; color:#fff; font-family:'Montserrat',Arial,sans-serif; font-size:0.88rem; font-weight:700; padding:12px 28px; border-radius:8px; text-decoration:none;">
         Ver todos os Produtos →
     </a>
 </div>
