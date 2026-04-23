@@ -1,19 +1,27 @@
 """
-Automação de edição de páginas no painel administrativo.
+Automação de edição em massa de páginas no painel administrativo.
 
-Este script utiliza PyAutoGUI para automatizar a criação e edição de páginas
-em um sistema web, substituindo o conteúdo HTML com base em uma lista de cidades.
+Este script utiliza PyAutoGUI para automatizar o processo de criação e atualização
+de páginas em um sistema web, substituindo completamente o conteúdo HTML com base
+em dados estruturados (JSON).
 
-Para cada cidade:
-- Abre uma nova aba no navegador
-- Acessa a página administrativa
-- Busca pelo produto + nome da cidade
-- Entra no modo de edição
-- Substitui todo o conteúdo da página por um template HTML dinâmico
-- Insere automaticamente o nome da cidade no conteúdo
+A automação percorre uma lista de cidades e, para cada uma:
+- Abre uma nova aba no navegador e acessa o painel administrativo
+- Pesquisa automaticamente pelo termo (produto + cidade)
+- Localiza e acessa a página correspondente para edição
+- Substitui todo o conteúdo HTML por um template dinâmico
+- Injeta variáveis personalizadas (cidade + blocos de texto exclusivos)
+- Preenche automaticamente campos de SEO (title, keywords e description)
+- Salva a página e fecha a aba
 
-Objetivo: agilizar a criação/atualização em massa de páginas personalizadas
-para diferentes localidades.
+O template HTML é padronizado, porém enriquecido com conteúdo dinâmico,
+incluindo seções institucionais, SEO local, FAQ e blocos variáveis para
+evitar repetição e melhorar indexação orgânica.
+
+Objetivo:
+Automatizar a geração e manutenção em larga escala de páginas locais,
+reduzindo trabalho manual, aumentando consistência e otimizando SEO
+para múltiplas localidades.
 """
 
 #IMPORTS
